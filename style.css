@@ -21,13 +21,16 @@
 }
 .todo-app h2{
     color: #002765;
-    display:flex ;
-    align-items: center;
+    text-align: center;
     margin-bottom: 20px;
+    font-size: xx-large;
+    height: auto;
 }
 .todo-app h2 img{
-    width: 60px;
-    margin: left 10px; ;
+    width: 90px;
+    text-align: center;
+    height:auto;
+    
 }
 .row{
     display: flex;
@@ -58,7 +61,7 @@ border-radius: 40px;
 }
 ul li{
     list-style: none;
-    font-size: 17px;
+    font-size: 20px;
     padding: 12px 8px 12px 50px;
     user-select: none;
     cursor: pointer;
@@ -67,12 +70,11 @@ ul li{
 ul li::before{
     content: '';
     position: absolute;
-    height: 28px;
-    width: 28px;
+    height: 20px;
+    width: 20px;
     border-radius: 50%;
-    background-image: url(uncheck.png);
-    background-size: cover;
-    background-position: center;
+    background-color: #fff; /* Change this to whatever color you want for the checkbox */
+    border: 2px solid #af1ef3; /* Change this to whatever color you want for the checkbox border */
     top: 12px;
     left: 8px;
 }
@@ -81,5 +83,22 @@ ul li.checked{
     text-decoration: line-through;
 }
 ul li.checked::before{
-background-image:url(checked.png) ;
+    background-color: #af1ef3; /* Change this to whatever color you want for the checked state */
+    border-color: #af1ef3; 
+}
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #af1ef3;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+ul li span:hover{
+    background:
+    #edeef0 ;
 }
